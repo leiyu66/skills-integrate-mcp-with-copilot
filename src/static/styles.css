@@ -24,8 +24,54 @@ header {
   border-radius: 5px;
 }
 
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 16px;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.admin-controls {
+  position: relative;
+}
+
+.admin-icon-btn {
+  background-color: white;
+  color: #1a237e;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 0;
+}
+
+.admin-panel {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 240px;
+  background-color: white;
+  color: #333;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  padding: 12px;
+  text-align: left;
+  z-index: 10;
+}
+
+.admin-panel p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.admin-panel button {
+  width: 100%;
+  margin-top: 8px;
 }
 
 main {
@@ -72,6 +118,15 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.register-btn {
+  margin-top: 8px;
+}
+
+.register-btn:disabled {
+  background-color: #9ea6db;
+  cursor: not-allowed;
 }
 
 /* New styles for participants section */
@@ -190,6 +245,19 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .header-top-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-panel {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 footer {
